@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="flota_view_form" model="ir.ui.view">
+            <field name="name">flota_form.custom</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='model_year']" position="after">
+                    <field name="x_numero_unidad" string='N° de unidad'/>                  
+                </xpath>                
+            </field>
+        </record>
+    </data> 
+</openerp>     
