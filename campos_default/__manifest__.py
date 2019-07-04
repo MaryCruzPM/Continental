@@ -24,10 +24,7 @@
         'sale'
         ],
 
- #       'purchase',       
- #       'contacts',
- #       'stock',
-  
+ 
 
     # always loaded
 	'data': [#'views/fabricacion_editableDview.xml',
