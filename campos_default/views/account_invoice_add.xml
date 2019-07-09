@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="Account_invoice_view_order_form" model="ir.ui.view">
+            <field name="name">Account_invoice.view.order.form.custom</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='comment']" position="after">
+                    <field name="x_vehiculo" string='Vehículo'/>
+                    <field name="x_marca" string='Marca'/>
+                    <field name="x_modelo" string='Modelo'/>
+                    <field name="x_Matricula" string='Matricula'/> 
+                    <field name="x_year_modelo" string='Año del modelo'/>
+                    <field name="x_unidad" string='N° de Unidad'/>                      
+                </xpath>                
+            </field>
+        </record>
+    </data> 
+</openerp>        
+ 

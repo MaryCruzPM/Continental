@@ -29,6 +29,7 @@
     # always loaded
 	'data': [#'views/fabricacion_editableDview.xml',
                'views/sale_order.xml',
+               'views/account_invoice_add.xml',
     
     ],
 	'demo':[
