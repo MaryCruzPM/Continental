@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mechanic_res_partner_form" model="ir.ui.view">
+            <field name="name">mechanic.res.partner.form</field>
+            <field name="model">fleet.diagnose.assignto.technician</field>
+            <field name="inherit_id" ref="car_repair_industry.view_fleet_diagnose_assign_to_tech_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position='replace'>
+                    <field name="user_id" domain="[('category_id', '=', 'Mecánico')]" required="1" style="width: 50%"></field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
