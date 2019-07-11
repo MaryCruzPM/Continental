@@ -13,7 +13,8 @@ class editable(models.Model):
 	x_Matricula = fields.Char()
 	x_year_modelo = fields.Char()
 	x_unidad =fields.Char()
-
+	x_kilometraje=fields.Float()
+	x_unidadKilometro=fields.Selection(selection=[('kilometers','Kilómetros'),('Miles','Millas')],)
 
 	@api.model_create_multi
 	def create(self,vals):
@@ -26,15 +27,17 @@ class editable(models.Model):
 		print(res.id)
 		repair_x=self.env['fleet.repair'].search([('id','=',res.fleet_repair_id.id)],limit=1)
 		print(repair_x)
-		print(repair_x.fleet_repair_line.fleet_id.model_id)
+		print(repair_x.fleet_repair_line.fleet_id.model_id.name)
 		#res.write({'x_modelo':[(4,repair_x.fleet_repair_line.fleet_id.model_id)]})
 		res.x_modelo=repair_x.fleet_repair_line.fleet_id.model_id
 		res.x_marca=repair_x.fleet_repair_line.fleet_id.brand_id
 		res.x_Matricula=repair_x.fleet_repair_line.fleet_id.license_plate
 		res.x_year_modelo=repair_x.fleet_repair_line.fleet_id.model_year
-		res.x_unidad=repair_x.fleet_repair_line.fleet_id.x_numero_unidad
-		
+		res.x_kilometraje=repair_x.fleet_repair_line.fleet_id.odometer
+		res.x_unidadKilometro=repair_x.fleet_repair_line.fleet_id.odometer_unit
 		res.x_vehiculo=repair_x.fleet_repair_line.fleet_id
+		print(res.x_modelo)
+		print(res.x_modelo.name)
 		return res
 
 

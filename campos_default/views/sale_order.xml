@@ -7,12 +7,14 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="/form/sheet/group/group/field[@name='partner_shipping_id']" position="after">
-                    <field name="x_vehiculo" string='Vehículo'/>
-                    <field name="x_marca" string='Marca'/>
-                    <field name="x_modelo" string='Modelo'/>
-                    <field name="x_Matricula" string='Matricula'/> 
+                   <!--  <field name="x_vehiculo" string='Vehículo'/>  
+                    <field name="x_marca" string='Marca'/> -->
+                    <field name="x_modelo" string='Marca / Modelo'/>  
+                    <field name="x_Matricula" string='Matrícula'/> 
                     <field name="x_year_modelo" string='Año del modelo'/>
-                    <field name="x_unidad" string='N° de Unidad'/>                      
+                    <field name="x_unidad" string='N° de Unidad'/>
+                    <field name="x_kilometraje" string='KM'/>
+                  <!--  <field name="x_unidadKilometro" string='Unidad recorrida'/>  -->                      
                 </xpath>                
             </field>
         </record>

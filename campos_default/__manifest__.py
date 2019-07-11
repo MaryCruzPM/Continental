@@ -27,7 +27,7 @@
  
 
     # always loaded
-	'data': [#'views/fabricacion_editableDview.xml',
+	'data': [
                'views/sale_order.xml',
                'views/account_invoice_add.xml',
     
