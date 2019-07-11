@@ -28,7 +28,7 @@
 
 	'data': [
    'views/report_ventas.xml',
-#    'data/categorias.xml',
+   'views/reporte_factura.xml',
 
     ],
 	'demo':[
