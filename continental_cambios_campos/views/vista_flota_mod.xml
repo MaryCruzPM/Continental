@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="vista_flota_mod_view" model="ir.ui.view">
+            <field name="name">fleet.vehicle.tree.view</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="license_plate" string='Placa'></field>                   
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
