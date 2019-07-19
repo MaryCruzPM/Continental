@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="orden_trabajo_orm_view" model="ir.ui.view">
+            <field name="name">fleet.order.trabajo.tree.view</field>
+            <field name="model">fleet.workorder</field>
+            <field name="inherit_id" ref="car_repair_industry.view_fleet_workorder_tree"></field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="license_plate" string='Placa'></field>                   
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
